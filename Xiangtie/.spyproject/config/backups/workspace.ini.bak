@@ -6,5 +6,5 @@ save_non_project_files = False
 
 [main]
 version = 0.2.0
-recent_files = ['duqu.py', '..\\CreatEndlabel.py', '..\\..\\EndLabel_V2.0\\CreatEndlabel_V2.1.py', '..\\..\\EndLabel_V2.0\\pywin32test.py']
+recent_files = ['duqu.py', '..\\CreatEndlabel.py', '..\\..\\EndLabel_V2.0\\CreatEndlabel_V2.1.py', '..\\..\\EndLabel_V2.0\\pywin32test.py', '..\\..\\Price\\CheckPrice.py']
 

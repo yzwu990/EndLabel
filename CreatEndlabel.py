@@ -30,7 +30,7 @@ import tkinter.messagebox
 window = tk.Tk()
  
 #给窗口的可视化起名字
-window.title('箱贴生成程序 V1.1')
+window.title('End label generation V1.1')
  
 #设定窗口的大小(长 x 宽)
 window.geometry('500x200')  
@@ -41,13 +41,13 @@ window.iconbitmap('maxonn.ico')
 
 ## 设定标签
 #装箱单标签
-var_packingList = tk.StringVar(value="点击按钮导入装箱单")    # 将label标签的内容设置为字符类型，用var来接收此函数的传出内容用以显示在标签上
+var_packingList = tk.StringVar(value="Import packing list")    # 将label标签的内容设置为字符类型，用var来接收此函数的传出内容用以显示在标签上
 l_packingList = tk.Label(window, textvariable=var_packingList, bg='green', fg='white', font=('Arial', 12), width=20, height=2)
 # 说明： bg为背景，fg为字体颜色，font为字体，width为长，height为高，这里的长和高是字符的长和高，比如height=2,就是标签有2个字符高
 l_packingList.place(x=30, y=20)
 
 #箱贴标签
-var_template = tk.StringVar(value="点击按钮导入箱贴模板")  
+var_template = tk.StringVar(value="Import end label template")  
 l_template = tk.Label(window, textvariable=var_template, bg='red', fg='white', font=('Arial', 12), width=20, height=2)
 l_template.place(x=290, y=20)
 
@@ -56,7 +56,7 @@ l_template.place(x=290, y=20)
 #导入装箱单模板按钮
 def hit_me_p():
 
-    var_packingList.set('装箱单已导入')
+    var_packingList.set('Packing list imported')
     #全局变量，获取装箱单路径
     global packingList
     packingList = filedialog.askopenfilename()
@@ -64,7 +64,7 @@ def hit_me_p():
 #导入箱贴模板按钮
 def hit_me_t():
 
-    var_template.set('箱贴模板已导入')
+    var_template.set('End label template imported')
     #全局变量，获取箱贴模板路径
     global templateBook
     templateBook = filedialog.askopenfilename()
@@ -346,19 +346,19 @@ def generate():
     # print('')
     # print('**************')
     # print('箱贴生成完毕')
-    tkinter.messagebox.showinfo(title='完成', message='恭喜您！箱贴生成完毕！')
+    tkinter.messagebox.showinfo(title='Congrats', message='End labels are ready!')
 
 
 ## 放置Button
 #导入装箱单按钮
-b_packingList = tk.Button(window, text='导入装箱单', font=('Arial', 12), width=10, height=1, command=hit_me_p)
-b_packingList.place(x=70, y=80)
+b_packingList = tk.Button(window, text='Import packing list', font=('Arial', 12), width=19, height=1, command=hit_me_p)
+b_packingList.place(x=30, y=80)
 #导入箱贴按钮
-b_template = tk.Button(window, text='导入箱贴模板', font=('Arial', 12), width=12, height=1, command=hit_me_t)
-b_template.place(x=330, y=80)
+b_template = tk.Button(window, text='Import end label template', font=('Arial', 12), width=19, height=1, command=hit_me_t)
+b_template.place(x=290, y=80)
 #生成箱贴
-b_template = tk.Button(window, text='生成箱贴', font=('Arial', 12), width=12, height=1, command=generate)
-b_template.place(x=190, y=150)
+b_template = tk.Button(window, text='Generate end labels', font=('Arial', 12), width=18, height=1, command=generate)
+b_template.place(x=170, y=150)
 
  
 
